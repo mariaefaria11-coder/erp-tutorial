@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERP Commerce | Pedidos</title>
+  <script>
+    document.documentElement.dataset.theme =
+      localStorage.getItem("erpTheme_v2") ||
+      (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  </script>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-page="pedidos">
+  <div class="app-shell">
+    
+<aside class="sidebar">
+  <div class="brand">
+    <div class="brand-mark">EC</div>
+    <div><strong>ERP Commerce</strong><span>Gestão integrada</span></div>
+  </div>
+  <nav class="nav" id="navMain">
+    <a href="dashboard.html" data-page="dashboard"><span class="nav-icon">▦</span>Dashboard</a>
+    <a href="produtos.html" data-page="produtos"><span class="nav-icon">□</span>Produtos</a>
+    <a href="pedidos.html" data-page="pedidos"><span class="nav-icon">≡</span>Pedidos</a>
+    <a href="clientes.html" data-page="clientes"><span class="nav-icon">◎</span>Clientes</a>
+    <a href="tutorial.html" data-page="tutorial"><span class="nav-icon">?</span>Tutorial</a>
+  </nav>
+  <div class="sidebar-footer">
+    <a class="sidebar-button" href="tutorial.html">❔ Tutorial e ajuda</a>
+    <button class="sidebar-button" data-theme-toggle><span data-theme-icon>☾</span> <span data-theme-label>Modo escuro</span></button>
+  </div>
+</aside>
+<div class="mobile-sidebar-backdrop"></div>
+
+    <main class="main">
+      
+<header class="topbar">
+  <div class="topbar-title">
+    <button class="icon-button mobile-menu" data-mobile-menu aria-label="Abrir menu">☰</button>
+    <div><h1>Pedidos</h1><p>Pesquisa, filtros e acompanhamento das vendas</p></div>
+  </div>
+  <div class="topbar-actions">
+    
+    <button class="icon-button" data-theme-toggle aria-label="Alternar tema"><span data-theme-icon>☾</span></button>
+    <a class="button button-secondary" href="tutorial.html">❔ <span class="desktop-label">Tutorial</span></a>
+    <div class="avatar" title="Administrador">AD</div>
+  </div>
+</header>
+
+      <div class="content page-grid">
+        <section class="card" id="statusLegend">
+          <div class="card-body legend-row">
+            <strong>Legenda:</strong>
+            <span class="badge success">Pago / Enviado</span>
+            <span class="badge warning">Pendente</span>
+            <span class="badge danger">Cancelado</span>
+            <span class="badge processing">Processando</span>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="table-tools" id="orderFilters">
+            <div class="search-wrap">
+              <span class="search-icon">⌕</span>
+              <input class="form-control" id="orderSearch" placeholder="Pesquisar por cliente ou número...">
+            </div>
+            <select class="select-control" id="orderStatusFilter">
+              <option value="">Todos os status</option>
+              <option>Pago</option>
+              <option>Pendente</option>
+              <option>Cancelado</option>
+              <option>Processando</option>
+              <option>Enviado</option>
+            </select>
+          </div>
+          <div class="table-wrap" id="orderTable">
+            <table>
+              <thead><tr><th>Pedido</th><th>Cliente</th><th>Canal</th><th>Data</th><th>Total</th><th>Status</th><th>Alterar status</th></tr></thead>
+              <tbody id="orderTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  
+
+<div class="toast-container"></div>
+
+  
+<script src="../js/data.js"></script>
+<script src="../js/theme.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/tutorial.js"></script>
+
+
+  <!-- VLibras: tradução automática do conteúdo para Libras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget("https://vlibras.gov.br/app");
+  </script>
+
+</body>
+</html>

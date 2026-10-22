@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERP Commerce | Clientes</title>
+  <script>
+    document.documentElement.dataset.theme =
+      localStorage.getItem("erpTheme_v2") ||
+      (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  </script>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-page="clientes">
+  <div class="app-shell">
+    
+<aside class="sidebar">
+  <div class="brand">
+    <div class="brand-mark">EC</div>
+    <div><strong>ERP Commerce</strong><span>Gestão integrada</span></div>
+  </div>
+  <nav class="nav" id="navMain">
+    <a href="dashboard.html" data-page="dashboard"><span class="nav-icon">▦</span>Dashboard</a>
+    <a href="produtos.html" data-page="produtos"><span class="nav-icon">□</span>Produtos</a>
+    <a href="pedidos.html" data-page="pedidos"><span class="nav-icon">≡</span>Pedidos</a>
+    <a href="clientes.html" data-page="clientes"><span class="nav-icon">◎</span>Clientes</a>
+    <a href="tutorial.html" data-page="tutorial"><span class="nav-icon">?</span>Tutorial</a>
+  </nav>
+  <div class="sidebar-footer">
+    <a class="sidebar-button" href="tutorial.html">❔ Tutorial e ajuda</a>
+    <button class="sidebar-button" data-theme-toggle><span data-theme-icon>☾</span> <span data-theme-label>Modo escuro</span></button>
+  </div>
+</aside>
+<div class="mobile-sidebar-backdrop"></div>
+
+    <main class="main">
+      
+<header class="topbar">
+  <div class="topbar-title">
+    <button class="icon-button mobile-menu" data-mobile-menu aria-label="Abrir menu">☰</button>
+    <div><h1>Clientes</h1><p>Relacionamento e histórico de compras</p></div>
+  </div>
+  <div class="topbar-actions">
+    
+    <button class="icon-button" data-theme-toggle aria-label="Alternar tema"><span data-theme-icon>☾</span></button>
+    <a class="button button-secondary" href="tutorial.html">❔ <span class="desktop-label">Tutorial</span></a>
+    <div class="avatar" title="Administrador">AD</div>
+  </div>
+</header>
+
+      <div class="content page-grid">
+        <section class="kpi-grid" id="customerSummary">
+          <article class="card kpi-card"><div class="kpi-icon">◎</div><div class="kpi-label">Clientes ativos</div><div class="kpi-value">1.284</div><div class="kpi-change positive">↑ 6,2% no mês</div></article>
+          <article class="card kpi-card"><div class="kpi-icon">↻</div><div class="kpi-label">Taxa de recompra</div><div class="kpi-value">31%</div><div class="kpi-change positive">↑ 2,7 p.p.</div></article>
+          <article class="card kpi-card"><div class="kpi-icon">★</div><div class="kpi-label">Clientes VIP</div><div class="kpi-value">94</div><div class="kpi-change positive">7,3% da base</div></article>
+          <article class="card kpi-card"><div class="kpi-icon">＋</div><div class="kpi-label">Novos clientes</div><div class="kpi-value">67</div><div class="kpi-change positive">Neste mês</div></article>
+        </section>
+
+        <section class="card">
+          <div class="table-tools" id="customerSearch">
+            <div class="search-wrap">
+              <span class="search-icon">⌕</span>
+              <input class="form-control" id="customerSearchInput" placeholder="Pesquisar por nome ou e-mail...">
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="customer-grid" id="customerGrid"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  
+
+<div class="toast-container"></div>
+
+  
+<script src="../js/data.js"></script>
+<script src="../js/theme.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/tutorial.js"></script>
+
+
+  <!-- VLibras: tradução automática do conteúdo para Libras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget("https://vlibras.gov.br/app");
+  </script>
+
+</body>
+</html>
